@@ -1,9 +1,12 @@
 package com.developer.ilya.manyenglishwords;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //Создаем меню
-        getMenuInflater().inflate(R.menu.menu_list,menu);
+        getMenuInflater().inflate(R.menu.menu_activity_main,menu);
         return true;
     }
 
@@ -28,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (id){
             case R.id.menu_item1:
-                Toast.makeText(MainActivity.this,"Добавить",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this,AddWordActivity.class);
+                startActivity(i);
         }
         return true;
     }

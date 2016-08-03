@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">manyEnglishWords</string>
     <string name="menu_item_add">Добавить</string>
+    <string name="label_new_word">Добавить новое слово</string>
 </resources>
